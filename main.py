@@ -14,9 +14,9 @@ def move_to_cookie():
 # Moves cursor to upgrades tile and performs 10 clicks
 def upgrade():
     upgrades_location = pyautogui.locateCenterOnScreen('images/store.PNG', confidence=0.9)
-    shift = (-250, 120)
-    upgrades_location = upgrades_location + shift
     if upgrades_location is not None:
+        shift = (-250, 120)
+        upgrades_location = upgrades_location + shift
         pyautogui.moveTo(upgrades_location)
         for i in range(10):
             time.sleep(0.01)
@@ -26,14 +26,15 @@ def upgrade():
         return -1
 
 def main():
-    # Click upgrades 10 times
-    upgrade()
+    while (True):
+        # Click upgrades 10 times
+        upgrade()
 
-    # Move to cookie and click it 20 times
-    if move_to_cookie() == 0:
-        for i in range(10):
-            time.sleep(0.01)
-            pyautogui.click()
+        # Move to cookie and click it 20 times
+        if move_to_cookie() == 0:
+            for i in range(10):
+                time.sleep(0.01)
+                pyautogui.click()
 
 
 main()
