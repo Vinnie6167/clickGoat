@@ -1,7 +1,7 @@
 # clickGoat
 A bot which plays cookie clicker. Made uing PyAutoGUI.
 
-# installs
+# Installs
     pip install pillow
 
     pip install pyautogui
