@@ -1,13 +1,13 @@
 import pyautogui
 import time
 
-
 assets = ["factory.png", "mine.png", "farm.png", "grandma.png", "cursor.png"]
 
-clicks = 100
+clicks = 500
 buys = 3
 upgrades = 3
-iterations = 10
+iterations = 2
+
 
 # Moves cursor to cookie
 def move_to_cookie():
@@ -50,15 +50,14 @@ def buy():
 
 def main():
     for i in range(iterations):
-        # Click upgrades 10 times
-        upgrade()
-
         # Move to cookie and click it 20 times
         if move_to_cookie() == 0:
             for i in range(clicks):
                 time.sleep(0.01)
                 pyautogui.click()
 
+        upgrade()
         buy()
+
 
 main()
