@@ -1,12 +1,12 @@
 import pyautogui
 import time
 
-assets = ["factory.png", "mine.png", "farm.png", "grandma.png", "cursor.png"]
+assets = ["temple.png", "bank.png", "factory.png", "mine.png", "farm.png", "grandma.png", "cursor.png"]
 
 clicks = 500
 buys = 3
 upgrades = 3
-iterations = 2
+iterations = 1000
 
 
 # Moves cursor to cookie
